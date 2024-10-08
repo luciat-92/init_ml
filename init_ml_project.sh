@@ -22,9 +22,9 @@ mkdir -p "$project_path/notebooks/eda"
 mkdir -p "$project_path/notebooks/experiments"
 mkdir -p "$project_path/outputs/plots"
 mkdir -p "$project_path/outputs/reports"
-mkdir -p "$project_path/src/data"
-mkdir -p "$project_path/src/models"
-mkdir -p "$project_path/src/utils"
+mkdir -p "$project_path/code/data"
+mkdir -p "$project_path/code/models"
+mkdir -p "$project_path/code/utils"
 mkdir -p "$project_path/tests"
 
 
@@ -47,58 +47,58 @@ echo "Output plots, images, and visualizations." > "$project_path/outputs/plots/
 echo "Generated reports and summaries." > "$project_path/outputs/reports/README.md"
 
 # Source code package placeholders
-touch "$project_path/src/__init__.py"
-touch "$project_path/src/data/__init__.py"
-touch "$project_path/src/models/__init__.py"
-touch "$project_path/src/utils/__init__.py"
+touch "$project_path/code/__init__.py"
+touch "$project_path/code/data/__init__.py"
+touch "$project_path/code/models/__init__.py"
+touch "$project_path/code/utils/__init__.py"
 
-# Create meaningful Python script placeholders in src directories
-# src/data/preprocess.py
-cat <<EOL > "$project_path/src/data/preprocess.py"
+# Create meaningful Python script placeholders in code directories
+# code/data/preprocess.py
+cat <<EOL > "$project_path/code/data/preprocess.py"
 # preprocess.py
 # This script contains functions for data preprocessing, such as handling missing values,
 # feature scaling, and data transformations.
 EOL
 
-# src/data/loaders.py
-cat <<EOL > "$project_path/src/data/loaders.py"
+# code/data/loaders.py
+cat <<EOL > "$project_path/code/data/loaders.py"
 # loaders.py
 # This script contains functions for data loading datasets from CSV, Parquet, or databases. 
 # It also include functions for split datasets into training, validation, and test sets
 EOL
 
-# src/models/train.py
-cat <<EOL > "$project_path/src/models/train.py"
+# code/models/train.py
+cat <<EOL > "$project_path/code/models/train.py"
 # train.py
 # This script defines the machine learning models.
 EOL
 
-# src/models/evaluate.py
-cat <<EOL > "$project_path/src/models/evaluate.py"
+# code/models/evaluate.py
+cat <<EOL > "$project_path/code/models/evaluate.py"
 # evaluate.py
 # This script handles the evaluation of trained models and logs metrics.
 EOL
 
-# src/models/hp_tuning.py
-cat <<EOL > "$project_path/src/models/hp_tuning.py"
+# code/models/hp_tuning.py
+cat <<EOL > "$project_path/code/models/hp_tuning.py"
 # hp_tuning.py
 # This script handles hyperparameter optimization.
 EOL
 
-# src/utils/helper.py
-cat <<EOL > "$project_path/src/utils/helper.py"
+# code/utils/helper.py
+cat <<EOL > "$project_path/code/utils/helper.py"
 # helper.py
 # This script contains helper functions such as saving and loading models, logging, etc.
 EOL
 
-# src/utils/metrics.py
-cat <<EOL > "$project_path/src/utils/metrics.py"
+# code/utils/metrics.py
+cat <<EOL > "$project_path/code/utils/metrics.py"
 # metrics.py
 # This script contains any custom evaluation metrics beyond basic ones.
 EOL
 
-# src/utils/visualization.py
-cat <<EOL > "$project_path/src/utils/visualization.py"
+# code/utils/visualization.py
+cat <<EOL > "$project_path/code/utils/visualization.py"
 # visualization.py
 # This script contains functions for plot data and model performances.
 EOL
@@ -150,7 +150,7 @@ $project_name/
 │   ├── eda/               # EDA notebooks
 │   └── experiments/       # Experiment notebooks
 ├── outputs/               # Outputs such as plots and reports
-├── src/                   # Source code for data processing and modeling
+├── code/                   # Source code for data processing and modeling
 │   ├── data/              # Data processing scripts
 │   ├── models/            # Model training scripts
 │   ├── utils/             # Utility functions
